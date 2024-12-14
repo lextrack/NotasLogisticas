@@ -4,8 +4,8 @@ Es una aplicación informativa desarrollada con HTML, CSS y JavaScript, que inco
 
 Puedes revisarlo desde aquí <a href="https://lextrack.github.io/NotasLogisticas/" target="_blank">aquí</a>
 
-<img src="./Docs/1.png">
-<img src="./Docs/2.png">
+<img src="./screenshots/1.png">
+<img src="./screenshots/2.png">
 
 ## License
 

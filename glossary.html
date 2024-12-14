@@ -9,20 +9,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="icon" href="assets/imgs/icono.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="icon" href="imgs/icono.ico" />
+    <style>
+      .table-container {
+          min-height: 800px;
+      }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Notas Logísticas</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alternar navegación">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="logisticsBasics.html">Conceptos básicos de logística</a>
-          <a class="nav-link" aria-current="page" href="logisticsAdvanced.html">Conceptos variados</a>
+          <a class="nav-link" aria-current="page" href="logisticsConcepts1.html">Conceptos variados</a>
           <a class="nav-link" href="methodsmodelsLogistics.html">Métodos y modelos en logística</a>
           <a class="nav-link active" href="glossary.html">Glosario</a>
         </div>
@@ -33,145 +39,35 @@
   <div class="container">
     <div class="h2 pb-2 mb-4 text-info text-center border-bottom border-info mt-3 md-3">
         Glosario
-      </div>
-      <h4 class="text-center">Términos básicos utilizados en el campo de la logística 🏢</h4>
-      <table class="table table-striped table-dark">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Foto</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td><strong>Factura</strong></td>
-            <td>Una factura comercial es un documento legal utilizado para procesar acuerdos en el comercio internacional.</td>
-            <td><img src="assets/imgs/invoice.png" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td><strong>Inventario</strong></td>
-            <td>El total de bienes y materiales disponibles, incluyendo materias primas, trabajo en proceso y productos terminados.</td>
-            <td><img src="assets/imgs/inventory-analysis-optimize-operations-header-image-2x-us-en.webp" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td><strong>Almacén</strong></td>
-            <td>Una instalación utilizada para almacenar bienes y materiales, a menudo incluyendo muelles de carga, áreas de embalaje y oficinas.</td>
-            <td><img src="assets/imgs/warehouse.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td><strong>Transporte</strong></td>
-            <td>El movimiento de bienes de un lugar a otro, típicamente por camión, tren, barco o avión.</td>
-            <td><img src="assets/imgs/transport.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td><strong>Logística</strong></td>
-            <td>El proceso de planificar, ejecutar y controlar el movimiento de bienes, información y recursos desde el punto de origen hasta el punto de consumo.</td>
-            <td><img src="assets/imgs/logistics.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td><strong>Cadena de Suministro</strong></td>
-            <td>Todo el proceso de producir y entregar un producto o servicio, desde las materias primas hasta el cliente final.</td>
-            <td><img src="assets/imgs/supply-chain.svg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td><strong>Distribución</strong></td>
-            <td>El proceso de llevar productos y materiales del almacén al cliente, incluyendo transporte, almacenamiento y entrega de bienes.</td>
-            <td><img src="assets/imgs/DistributionSingle.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td><strong>Optimización de Rutas</strong></td>
-            <td>El proceso de encontrar la ruta más eficiente para entregar bienes, considerando factores como distancia, tiempo y costo.</td>
-            <td><img src="assets/imgs/routes.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td><strong>Planificación de Capacidad</strong></td>
-            <td>El proceso de determinar la cantidad de recursos (por ejemplo, mano de obra, equipos y espacio de almacenamiento) necesarios para satisfacer la demanda.</td>
-            <td><img src="assets/imgs/Capacity-planning-process.png" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td><strong>Selección y Empaque</strong></td>
-            <td>El proceso de seleccionar (picking) y preparar los bienes (empaque) para el envío, a menudo incluyendo la preparación de materiales de embalaje, etiquetado y documentación.</td>
-            <td><img src="assets/imgs/packing.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">11</th>
-            <td><strong>Entrega</strong></td>
-            <td>El proceso de transportar físicamente los bienes al cliente final, a menudo mediante el uso de camiones de entrega y personal de entrega.</td>
-            <td><img src="assets/imgs/delivery.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">12</th>
-            <td><strong>Logística Inversa</strong></td>
-            <td>El proceso de gestionar el retorno o disposición de bienes, incluyendo la recolección, transporte y procesamiento de devoluciones, reparaciones y productos al final de su vida útil.</td>
-            <td><img src="assets/imgs/REVERSE-LOGISTICS.png" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">13</th>
-            <td><strong>Entrega Última Milla</strong></td>
-            <td>La entrega última milla se refiere a la etapa final del proceso de entrega, en la que los productos se entregan al cliente final. Esto puede ser un aspecto particularmente desafiante de la logística, ya que requiere navegar por rutas de entrega complejas, coordinar con múltiples partes interesadas y gestionar las expectativas del cliente.</td>
-            <td><img src="assets/imgs/lastmile.png" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">14</th>
-            <td><strong>Centro de Distribución</strong></td>
-            <td>Una instalación utilizada para recibir, almacenar y distribuir productos a minoristas, mayoristas o directamente a los clientes.</td>
-            <td><img src="assets/imgs/dc.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">15</th>
-            <td><strong>Agente de Aduanas</strong></td>
-            <td>Un profesional que ayuda en el despacho de mercancías a través de la aduana, asegurando el cumplimiento de las normativas de importación/exportación.</td>
-            <td><img src="assets/imgs/Experienced-Customs-Broker.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">16</th>
-            <td><strong>RFID (Identificación por Radiofrecuencia)</strong></td>
-            <td>Una tecnología que usa ondas de radio para identificar y rastrear objetos, comúnmente utilizada en la gestión de inventarios.</td>
-            <td><img src="assets/imgs/reader_tags.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">17</th>
-            <td><strong>Conocimiento de Embarque</strong></td>
-            <td>Un documento legal que detalla el envío de bienes y sirve como evidencia del contrato de transporte.</td>
-            <td><img src="assets/imgs/billof.png" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">18</th>
-            <td><strong>3PL (Logística de Terceros)</strong></td>
-            <td>Empresas que proporcionan servicios de logística externalizados y cadena de suministro, incluyendo transporte, almacenamiento y distribución.</td>
-            <td><img src="assets/imgs/pl.png" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">19</th>
-            <td><strong>Cross-docking</strong></td>
-            <td>Una práctica logística donde los productos se transfieren directamente de transporte entrante a saliente sin ser almacenados en un almacén.</td>
-            <td><img src="assets/imgs/RSF_BLOG_CROSS_DOCKING_GRAPHIC.jpg" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-          <tr>
-            <th scope="row">20</th>
-            <td><strong>Incoterms (Términos Internacionales de Comercio)</strong></td>
-            <td>Términos estandarizados de comercio internacional que definen las responsabilidades de compradores y vendedores en un contrato.</td>
-            <td><img src="assets/imgs/incoterms-2020-risk-transfer.png" class="img-fluid" style="width: 300px; height: 120px;"></td>
-          </tr>
-        </tbody>
-      </table>
+    </div>
+    <h4 class="text-center">Términos básicos utilizados en el campo de la logística 🏢</h4>
+    
+    <div class="table-container">
+        <table id="glossaryTable" class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Foto</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <nav aria-label="Navegación de términos">
+        <ul id="pagination" class="pagination justify-content-center">
+        </ul>
+    </nav>
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
   crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
   
 </body>
 </html>
