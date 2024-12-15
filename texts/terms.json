@@ -4,121 +4,121 @@
             "id": 1,
             "name": "Factura",
             "description": "Una factura comercial es un documento legal utilizado para procesar acuerdos en el comercio internacional.",
-            "image": "imgs/invoice.png"
+            "image": "img/invoice.png"
         },
         {
             "id": 2,
             "name": "Inventario",
             "description": "El total de bienes y materiales disponibles, incluyendo materias primas, trabajo en proceso y productos terminados.",
-            "image": "imgs/inventory-analysis-optimize-operations-header-image-2x-us-en.webp"
+            "image": "img/inventory-analysis-optimize-operations-header-image-2x-us-en.webp"
         },
         {
             "id": 3,
             "name": "Almacén",
             "description": "Una instalación utilizada para almacenar bienes y materiales, a menudo incluyendo muelles de carga, áreas de embalaje y oficinas.",
-            "image": "imgs/warehouse.jpg"
+            "image": "img/warehouse.jpg"
         },
         {
             "id": 4,
             "name": "Transporte",
             "description": "El movimiento de bienes de un lugar a otro, típicamente por camión, tren, barco o avión.",
-            "image": "imgs/transport.jpg"
+            "image": "img/transport.jpg"
         },
         {
             "id": 5,
             "name": "Logística",
             "description": "El proceso de planificar, ejecutar y controlar el movimiento de bienes, información y recursos desde el punto de origen hasta el punto de consumo.",
-            "image": "imgs/logistics.jpg"
+            "image": "img/logistics.jpg"
         },
         {
             "id": 6,
             "name": "Cadena de Suministro",
             "description": "Todo el proceso de producir y entregar un producto o servicio, desde las materias primas hasta el cliente final.",
-            "image": "imgs/supply-chain.svg"
+            "image": "img/supply-chain.svg"
         },
         {
             "id": 7,
             "name": "Distribución",
             "description": "El proceso de llevar productos y materiales del almacén al cliente, incluyendo transporte, almacenamiento y entrega de bienes.",
-            "image": "imgs/DistributionSingle.jpg"
+            "image": "img/DistributionSingle.jpg"
         },
         {
             "id": 8,
             "name": "Optimización de Rutas",
             "description": "El proceso de encontrar la ruta más eficiente para entregar bienes, considerando factores como distancia, tiempo y costo.",
-            "image": "imgs/routes.jpg"
+            "image": "img/routes.jpg"
         },
         {
             "id": 9,
             "name": "Planificación de Capacidad",
             "description": "El proceso de determinar la cantidad de recursos (por ejemplo, mano de obra, equipos y espacio de almacenamiento) necesarios para satisfacer la demanda.",
-            "image": "imgs/Capacity-planning-process.png"
+            "image": "img/Capacity-planning-process.png"
         },
         {
             "id": 10,
             "name": "Selección y Empaque",
             "description": "El proceso de seleccionar (picking) y preparar los bienes (empaque) para el envío, a menudo incluyendo la preparación de materiales de embalaje, etiquetado y documentación.",
-            "image": "imgs/packing.jpg"
+            "image": "img/packing.jpg"
         },
         {
             "id": 11,
             "name": "Entrega",
             "description": "El proceso de transportar físicamente los bienes al cliente final, a menudo mediante el uso de camiones de entrega y personal de entrega.",
-            "image": "imgs/delivery.jpg"
+            "image": "img/delivery.jpg"
         },
         {
             "id": 12,
             "name": "Logística Inversa",
             "description": "El proceso de gestionar el retorno o disposición de bienes, incluyendo la recolección, transporte y procesamiento de devoluciones, reparaciones y productos al final de su vida útil.",
-            "image": "imgs/REVERSE-LOGISTICS.png"
+            "image": "img/REVERSE-LOGISTICS.png"
         },
         {
             "id": 13,
             "name": "Entrega Última Milla",
             "description": "La entrega última milla se refiere a la etapa final del proceso de entrega, en la que los productos se entregan al cliente final. Esto puede ser un aspecto particularmente desafiante de la logística, ya que requiere navegar por rutas de entrega complejas, coordinar con múltiples partes interesadas y gestionar las expectativas del cliente.",
-            "image": "imgs/lastmile.png"
+            "image": "img/lastmile.png"
         },
         {
             "id": 14,
             "name": "Centro de Distribución",
             "description": "Una instalación utilizada para recibir, almacenar y distribuir productos a minoristas, mayoristas o directamente a los clientes.",
-            "image": "imgs/dc.jpg"
+            "image": "img/dc.jpg"
         },
         {
             "id": 15,
             "name": "Agente de Aduanas",
             "description": "Un profesional que ayuda en el despacho de mercancías a través de la aduana, asegurando el cumplimiento de las normativas de importación/exportación.",
-            "image": "imgs/Experienced-Customs-Broker.jpg"
+            "image": "img/Experienced-Customs-Broker.jpg"
         },
         {
             "id": 16,
             "name": "RFID (Identificación por Radiofrecuencia)",
             "description": "Una tecnología que usa ondas de radio para identificar y rastrear objetos, comúnmente utilizada en la gestión de inventarios.",
-            "image": "imgs/reader_tags.jpg"
+            "image": "img/reader_tags.jpg"
         },
         {
             "id": 17,
             "name": "Conocimiento de Embarque",
             "description": "Un documento legal que detalla el envío de bienes y sirve como evidencia del contrato de transporte.",
-            "image": "imgs/billof.png"
+            "image": "img/billof.png"
         },
         {
             "id": 18,
             "name": "3PL (Logística de Terceros)",
             "description": "Empresas que proporcionan servicios de logística externalizados y cadena de suministro, incluyendo transporte, almacenamiento y distribución.",
-            "image": "imgs/pl.png"
+            "image": "img/pl.png"
         },
         {
             "id": 19,
             "name": "Cross-docking",
             "description": "Una práctica logística donde los productos se transfieren directamente de transporte entrante a saliente sin ser almacenados en un almacén.",
-            "image": "imgs/RSF_BLOG_CROSS_DOCKING_GRAPHIC.jpg"
+            "image": "img/RSF_BLOG_CROSS_DOCKING_GRAPHIC.jpg"
         },
         {
             "id": 20,
             "name": "Incoterms (Términos Internacionales de Comercio)",
             "description": "Términos estandarizados de comercio internacional que definen las responsabilidades de compradores y vendedores en un contrato.",
-            "image": "imgs/incoterms-2020-risk-transfer.png"
+            "image": "img/incoterms-2020-risk-transfer.png"
         }
     ]
 }
