@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">Notas Logisticas</string>
-    <string name="title_activity_main">Notas Logisticas</string>
-    <string name="package_name">com.lextrack.notaslogisticas</string>
-    <string name="custom_url_scheme">com.lextrack.notaslogisticas</string>
-</resources>
