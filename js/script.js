@@ -1,9 +1,10 @@
 let termsData = [];
+let filteredTerms = [];
+let isSearching = false;
 
 const itemsPerPage = 5;
 let currentPage = 1;
 
-// CARGA DE DATOS DEL GLOSARIO
 fetch('texts/terms.json')
     .then(response => {
         if (!response.ok) {
@@ -30,17 +31,30 @@ fetch('texts/terms.json')
         }
     });
 
-// RENDERIZAR TABLA DEL GLOSARIO
 function renderTable(page) {
     const tableBody = document.getElementById('tableBody');
     if (!tableBody) return;
-    
+
+    const dataToShow = isSearching ? filteredTerms : termsData;
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    
+
     tableBody.innerHTML = '';
 
-    const pageTerms = termsData.slice(startIndex, endIndex);
+    if (dataToShow.length === 0) {
+        tableBody.innerHTML = `
+            <tr>
+                <td colspan="4" class="text-center text-warning py-5">
+                    <strong>No se encontraron resultados para tu búsqueda</strong>
+                </td>
+            </tr>
+        `;
+        const pagination = document.getElementById('pagination');
+        if (pagination) pagination.innerHTML = '';
+        return;
+    }
+
+    const pageTerms = dataToShow.slice(startIndex, endIndex);
     pageTerms.forEach(term => {
         const row = `
             <tr>
@@ -48,9 +62,9 @@ function renderTable(page) {
                 <td><strong>${term.name}</strong></td>
                 <td>${term.description}</td>
                 <td>
-                    <img 
-                        data-src="${term.image}" 
-                        class="img-fluid lazy-image" 
+                    <img
+                        data-src="${term.image}"
+                        class="img-fluid lazy-image"
                         style="width: 300px; height: 120px; background-color: #1a1a1a;"
                         alt="${term.name}">
                 </td>
@@ -63,12 +77,12 @@ function renderTable(page) {
     initializeLazyLoading();
 }
 
-// RENDERIZAR PAGINACIÓN
 function renderPagination() {
     const pagination = document.getElementById('pagination');
     if (!pagination) return;
-    
-    const totalPages = Math.ceil(termsData.length / itemsPerPage);
+
+    const dataToShow = isSearching ? filteredTerms : termsData;
+    const totalPages = Math.ceil(dataToShow.length / itemsPerPage);
 
     pagination.innerHTML = '';
 
@@ -80,7 +94,6 @@ function renderPagination() {
         startPage = Math.max(1, endPage - maxVisiblePages + 1);
     }
 
-    // Botón anterior
     const prevLi = document.createElement('li');
     prevLi.classList.add('page-item');
     if (currentPage === 1) prevLi.classList.add('disabled');
@@ -91,7 +104,6 @@ function renderPagination() {
     `;
     pagination.appendChild(prevLi);
 
-    // Números de página
     for (let i = startPage; i <= endPage; i++) {
         const li = document.createElement('li');
         li.classList.add('page-item');
@@ -102,7 +114,6 @@ function renderPagination() {
         pagination.appendChild(li);
     }
 
-    // Botón siguiente
     const nextLi = document.createElement('li');
     nextLi.classList.add('page-item');
     if (currentPage === totalPages) nextLi.classList.add('disabled');
@@ -115,27 +126,72 @@ function renderPagination() {
 }
 
 function changePage(page) {
-    const totalPages = Math.ceil(termsData.length / itemsPerPage);
+    const dataToShow = isSearching ? filteredTerms : termsData;
+    const totalPages = Math.ceil(dataToShow.length / itemsPerPage);
 
     if (page >= 1 && page <= totalPages) {
         currentPage = page;
         renderTable(currentPage);
-        
-        // Scroll suave hacia arriba al cambiar de página
+
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     }
-    
+
     return false;
 }
 
-// LAZY LOADING DE IMÁGENES
+function searchTerms(query) {
+    const searchResults = document.getElementById('searchResults');
+
+    if (!query || query.trim() === '') {
+        isSearching = false;
+        filteredTerms = [];
+        currentPage = 1;
+        renderTable(currentPage);
+        if (searchResults) searchResults.textContent = '';
+        return;
+    }
+
+    isSearching = true;
+    const searchQuery = query.toLowerCase().trim();
+
+    filteredTerms = termsData.filter(term => {
+        return term.name.toLowerCase().includes(searchQuery) ||
+               term.description.toLowerCase().includes(searchQuery);
+    });
+
+    currentPage = 1;
+    renderTable(currentPage);
+
+    if (searchResults) {
+        if (filteredTerms.length === 0) {
+            searchResults.textContent = 'No se encontraron resultados';
+        } else if (filteredTerms.length === 1) {
+            searchResults.textContent = '1 resultado encontrado';
+        } else {
+            searchResults.textContent = `${filteredTerms.length} resultados encontrados`;
+        }
+    }
+}
+
+function clearSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    if (searchInput) searchInput.value = '';
+    if (searchResults) searchResults.textContent = '';
+
+    isSearching = false;
+    filteredTerms = [];
+    currentPage = 1;
+    renderTable(currentPage);
+}
+
 function initializeLazyLoading() {
     const lazyImages = document.querySelectorAll('.lazy-image');
     
-    // Verificar si el navegador soporta IntersectionObserver
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -159,7 +215,6 @@ function initializeLazyLoading() {
             imageObserver.observe(img);
         });
     } else {
-        // Fallback para navegadores antiguos
         lazyImages.forEach(img => {
             const src = img.getAttribute('data-src');
             if (src) {
@@ -169,13 +224,11 @@ function initializeLazyLoading() {
     }
 }
 
-// BOTÓN VOLVER ARRIBA
 function initScrollToTopButton() {
     const scrollBtn = document.getElementById('scrollToTopBtn');
     
     if (!scrollBtn) return;
 
-    // Mostrar/ocultar botón según scroll
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
             scrollBtn.classList.add('show');
@@ -184,7 +237,6 @@ function initScrollToTopButton() {
         }
     });
 
-    // Funcionalidad del botón
     scrollBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
@@ -193,21 +245,38 @@ function initScrollToTopButton() {
     });
 }
 
-// INICIALIZACIÓN AL CARGAR LA PÁGINA
 document.addEventListener('DOMContentLoaded', () => {
     initScrollToTopButton();
-    
+
     if (document.getElementById('glossaryTable')) {
         initializeLazyLoading();
+
+        const searchInput = document.getElementById('searchInput');
+        const clearButton = document.getElementById('clearSearch');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', debounce((e) => {
+                searchTerms(e.target.value);
+            }, 300));
+
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    searchTerms(e.target.value);
+                }
+            });
+        }
+
+        if (clearButton) {
+            clearButton.addEventListener('click', clearSearch);
+        }
     }
 });
 
-// MANEJO DE ERRORES GLOBAL
 window.addEventListener('error', (event) => {
     console.error('Error detectado:', event.error);
 });
 
-// OPTIMIZACIÓN: Debounce para scroll
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {

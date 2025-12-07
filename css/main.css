@@ -122,9 +122,6 @@ footer p {
     color: white;
 }
 
-/* ============================================
-   BOTÓN VOLVER ARRIBA
-   ============================================ */
 #scrollToTopBtn {
     position: fixed;
     bottom: 30px;
@@ -187,11 +184,6 @@ footer p {
     }
 }
 
-/* ============================================
-   MEJORAS RESPONSIVE - PANTALLAS PEQUEÑAS
-   ============================================ */
-
-/* Tablets y pantallas medianas */
 @media (max-width: 992px) {
     .container {
         padding-left: 15px;
@@ -207,7 +199,6 @@ footer p {
     }
 }
 
-/* Móviles */
 @media (max-width: 768px) {
     * {
         font-size: 14px;
@@ -225,7 +216,6 @@ footer p {
         font-size: 1rem !important;
     }
     
-    /* Navbar responsive */
     .navbar-brand {
         font-size: 15px;
     }
@@ -237,8 +227,7 @@ footer p {
     .nav-link {
         padding: 10px 0;
     }
-    
-    /* Tablas responsive */
+
     .table-container {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -252,14 +241,12 @@ footer p {
         padding: 8px 4px !important;
         white-space: nowrap;
     }
-    
-    /* Imágenes en tabla más pequeñas en móvil */
+
     table img {
         max-width: 150px !important;
         height: auto !important;
     }
     
-    /* Cards responsive */
     .card {
         margin-bottom: 15px;
     }
@@ -268,17 +255,14 @@ footer p {
         padding: 15px;
     }
     
-    /* Bordes con padding reducido */
     .border {
         padding: 15px !important;
     }
-    
-    /* Grid de 2 columnas a 1 columna */
+
     .row.g-2 .col-6 {
         width: 100%;
     }
     
-    /* Botón volver arriba más pequeño en móvil */
     #scrollToTopBtn {
         width: 45px;
         height: 45px;
@@ -287,7 +271,6 @@ footer p {
         font-size: 20px;
     }
     
-    /* Footer responsive */
     footer {
         padding: 20px 10px;
         font-size: 13px;
@@ -296,8 +279,7 @@ footer p {
     footer p {
         margin-bottom: 10px;
     }
-    
-    /* Paginación más compacta */
+
     .pagination {
         flex-wrap: wrap;
         justify-content: center;
@@ -309,7 +291,6 @@ footer p {
     }
 }
 
-/* Móviles muy pequeños */
 @media (max-width: 480px) {
     * {
         font-size: 13px;
@@ -332,7 +313,6 @@ footer p {
         padding-right: 10px;
     }
     
-    /* Tabla aún más compacta */
     table {
         font-size: 12px;
     }
@@ -340,8 +320,7 @@ footer p {
     table img {
         max-width: 120px !important;
     }
-    
-    /* Accordion más compacto */
+
     .accordion-button {
         font-size: 13px;
         padding: 12px;
@@ -351,8 +330,7 @@ footer p {
         font-size: 13px;
         padding: 12px;
     }
-    
-    /* Cards más compactas */
+
     .card-body {
         padding: 12px;
     }
@@ -370,7 +348,6 @@ footer p {
     }
 }
 
-/* Mejoras para impresión */
 @media print {
     #scrollToTopBtn,
     .navbar,
