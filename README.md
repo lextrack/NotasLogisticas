@@ -27,13 +27,6 @@ Puedes revisarlo <a href="https://lextrack.github.io/NotasLogisticas/" target="_
 
 ### Herramientas Interactivas
 
-#### Glosario
-- Más de 100 términos logísticos
-- **Búsqueda en tiempo real** con filtrado instantáneo
-- Sistema de paginación dinámico
-- Contador de resultados de búsqueda
-- Función de limpieza de búsqueda
-
 #### Calculadoras Logísticas
 
 1. **Calculadora de Cubicaje**
@@ -74,48 +67,6 @@ Puedes revisarlo <a href="https://lextrack.github.io/NotasLogisticas/" target="_
 - **Alerts Informativos**: Destacan información clave
 - **Botón "Volver Arriba"**: Navegación mejorada
 - **Contraste Optimizado**: Todos los textos legibles con buen contraste
-
-### Estructura del Proyecto
-
-```
-NotasLogisticas/
-├── index.html                    # Página principal
-├── logisticsBasics.html          # Conceptos básicos
-├── logisticsConcepts1.html       # Conceptos variados
-├── methodsmodelsLogistics.html   # Métodos y modelos
-├── glossary.html                 # Glosario con búsqueda
-├── calculators.html              # Calculadoras interactivas
-├── faq.html                      # Preguntas frecuentes
-├── css/
-│   └── main.css                  # Estilos globales
-├── js/
-│   ├── script.js                 # Funcionalidad general y glosario
-│   └── calculators.js            # Lógica de calculadoras
-├── img/                          # Imágenes y recursos
-├── screenshots/                  # Capturas de pantalla
-└── README.md
-```
-
-## Instalación y Uso
-
-1. Clona el repositorio:
-```bash
-git clone https://github.com/Lextrack/NotasLogisticas.git
-```
-
-2. Abre `index.html` en tu navegador preferido
-
-O simplemente visita la versión en vivo: [Notas Logísticas](https://lextrack.github.io/NotasLogisticas/)
-
-## Contribuir
-
-Las contribuciones son bienvenidas. Por favor:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
 
 ## License
 
